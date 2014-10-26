@@ -47,8 +47,8 @@ class Settings:
         """ Read the config  """
         try:
             self.Config.read(filename)
-            self.music_folder = self.config_section_map("Config")['music_folder']
-            self.youtube_foldername = self.config_section_map("Config")['youtube_foldername']
+            self.music_folder = str(self.config_section_map("Config")['music_folder'])
+            self.youtube_foldername = str(self.config_section_map("Config")['youtube_foldername'])
             self.create_subfolders = self.config_section_map("Config")['create_subfolders']
             self.create_playlists = self.config_section_map("Config")['create_playlists']
 

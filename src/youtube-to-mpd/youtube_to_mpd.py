@@ -29,7 +29,26 @@ class YoutubeToMPD:
         self.print_end_info()
 
     def convert(self):
-        pass
+        self.go_to_folder()
+
+    def go_to_folder(self):
+        if "~/" in self.settings.music_folder:
+            self.settings.music_folder = self.settings.music_folder[2:]
+        path = os.path.join(os.environ['HOME'], self.settings.music_folder)
+        print(path)
+        if (os.path.isdir(path)):
+            os.chdir(path)
+            path = os.path.join(path, self.settings.youtube_foldername)
+            if (os.path.isdir(path)):
+                os.chdir(self.settings.youtube_foldername)
+                print(os.getcwd())
+            else:
+                print("Error opening YouTube folder")
+                exit(0)
+                #TODO create this folder when needed?
+        else:
+            print("Error opening music folder")
+            exit(0)
 
     def print_start_info(self):
         print("Starting Youtube To MPD")
