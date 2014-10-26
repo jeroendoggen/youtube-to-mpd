@@ -30,6 +30,7 @@ class YoutubeToMPD:
 
     def convert(self):
         self.go_to_folder()
+        self.download()
 
     def go_to_folder(self):
         if "~/" in self.settings.music_folder:
@@ -49,6 +50,11 @@ class YoutubeToMPD:
         else:
             print("Error opening music folder")
             exit(0)
+
+    def download(self):
+        if(self.settings.playlist) is not None:
+            print("Starting download")
+            os.system("youtube-dl -cit --extract-audio --audio-format aac  http://www.youtube.com/playlist?list=" + self.settings.playlist)
 
     def print_start_info(self):
         print("Starting Youtube To MPD")

@@ -17,6 +17,9 @@ class Settings:
     """ Contains all the tools to analyse Blackboard assignments """
     config_file = "settings.conf"
     Config = ConfigParser.ConfigParser()
+    playlist = None
+    music_folder = None
+    youtube_foldername = None
 
     parser = argparse.ArgumentParser(
         prog="youtube_to_mpd",
@@ -66,6 +69,8 @@ class Settings:
         """Configure all the cli arguments."""
         self.parser.add_argument("-f", metavar="music_folder",
           help="Folder where the music will be saved")
+        self.parser.add_argument("-p", metavar="playlist",
+          help="Playlist ID (without the http://youtube.com/... part)")
 
         self.parser.add_argument('--create_subfolders', action='store_true', help='Start the virtual machines')
         self.parser.add_argument('--create_playlists', action='store_true', help='Stop the virtual machines')
@@ -74,7 +79,9 @@ class Settings:
         """Read all the cli arguments."""
         args = self.parser.parse_args()
         if (args.f is not None):
-            self.servers = args.f
+            self.music_folder = args.f
+        if (args.p is not None):
+            self.playlist = args.p
 
         if (args.create_subfolders is True):
             self.actions.create_subfolders = True
