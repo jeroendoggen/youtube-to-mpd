@@ -18,6 +18,7 @@ class Settings:
     config_file = "settings.conf"
     Config = ConfigParser.ConfigParser()
     playlist = None
+    song = None
     music_folder = None
     youtube_foldername = None
 
@@ -71,6 +72,8 @@ class Settings:
           help="Folder where the music will be saved")
         self.parser.add_argument("-p", metavar="playlist",
           help="Playlist ID (without the http://youtube.com/... part)")
+        self.parser.add_argument("-s", metavar="song",
+          help="Song ID (without the http://youtube.com/... part)")
 
         self.parser.add_argument('--create_subfolders', action='store_true', help='Start the virtual machines')
         self.parser.add_argument('--create_playlists', action='store_true', help='Stop the virtual machines')
@@ -82,6 +85,8 @@ class Settings:
             self.music_folder = args.f
         if (args.p is not None):
             self.playlist = args.p
+        if (args.s is not None):
+            self.song = args.s
 
         if (args.create_subfolders is True):
             self.actions.create_subfolders = True

@@ -53,8 +53,11 @@ class YoutubeToMPD:
 
     def download(self):
         if(self.settings.playlist) is not None:
-            print("Starting download")
+            print("Starting playlist download")
             os.system("youtube-dl -cit --extract-audio --audio-format aac  http://www.youtube.com/playlist?list=" + self.settings.playlist)
+        if(self.settings.song) is not None:
+            print("Starting song download")
+            os.system("youtube-dl -cit --extract-audio --audio-format aac  https://www.youtube.com/watch?v=" + self.settings.song)
 
     def print_start_info(self):
         print("Starting Youtube To MPD")
