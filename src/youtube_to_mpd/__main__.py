@@ -5,7 +5,7 @@ by calling "Python foldername"
 
 """
 
-from youtube_to_mpd.main import run
+from main import run
 
 if __name__ == '__main__':
     run()

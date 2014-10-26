@@ -8,8 +8,14 @@ Upcoming features:
  * Add them to mpd to allow easy playback
  * Create folders/mpd playlists for every youtube playlist
 
+## Install:
+ * will soon be available: (for now install from source "sudo setup.py install")
+ * Install using pip: ``pip install youtube_to_mpd. (Linux & Windows)
+ * Python Package available in the Python Package Index at: http://pypi.python.org/pypi/youtube_to_mpd/
+ 
 ## Usage:
- * Coming soon
+ * Download a single song and add to MPD: "python -m youtube_to_mpd -s SONGID" (for example: DgQR0x5ljek)
+ * Download a playlist and add to MPD: "python -m youtube_to_mpd -p PLAYLISTID" (for example: FLoLRVbYOEns6PTJtWo0Y_7g)
 
 ## Limitations:
  * Currently under active development (early Alpha!)
