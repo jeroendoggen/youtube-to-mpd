@@ -1,23 +1,25 @@
 # YouTube to MPD
 
-Frontend for youtube-dl to auto add youtube music to mpd
+Front end for youtube-dl to auto add YouTube music to Music Player Daemon (MPD).
 
 Features:
- * Download music from youtube videos
- * Download music from youtube playlists
+ * Download music from YouTube videos
+ * Download music from YouTube playlists
  * Add them to mpd to allow easy playback
 
 Upcoming features:
- * Create folders/mpd playlists for every youtube playlist
- 
-## Install:
- * will soon be available: (for now install from source "sudo setup.py install")
- * Install using pip: ``pip install youtube_to_mpd. (Linux & Windows)
- * Python Package available in the Python Package Index at: http://pypi.python.org/pypi/youtube_to_mpd/
- 
+ * Create folders/mpd playlists for every YouTube playlist
+
+## Install from the Python Package Index:
+ * ``pip install youtube_to_mpd``. (Linux & Windows)
+ * Package can be found here: http://pypi.python.org/pypi/youtube_to_mpd/
+
+## Install from source:
+ * run ``setup.py install`` (with root privileges)
+
 ## Usage:
- * Download a single song and add to MPD: "python -m youtube_to_mpd -s SONGID" (for example: DgQR0x5ljek)
- * Download a playlist and add to MPD: "python -m youtube_to_mpd -p PLAYLISTID" (for example: FLoLRVbYOEns6PTJtWo0Y_7g)
+ * Download a single song and add to MPD: ``python -m youtube_to_mpd -s SONGID`` (for example: DgQR0x5ljek)
+ * Download a playlist and add to MPD: ``python -m youtube_to_mpd -p PLAYLISTID`` (for example: FLoLRVbYOEns6PTJtWo0Y_7g)
 
 ## Limitations:
  * Currently under active development (early Alpha!)
