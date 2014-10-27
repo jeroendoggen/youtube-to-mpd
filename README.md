@@ -2,12 +2,14 @@
 
 Frontend for youtube-dl to auto add youtube music to mpd
 
-Upcoming features:
+Features:
  * Download music from youtube videos
  * Download music from youtube playlists
  * Add them to mpd to allow easy playback
- * Create folders/mpd playlists for every youtube playlist
 
+Upcoming features:
+ * Create folders/mpd playlists for every youtube playlist
+ 
 ## Install:
  * will soon be available: (for now install from source "sudo setup.py install")
  * Install using pip: ``pip install youtube_to_mpd. (Linux & Windows)
@@ -26,13 +28,9 @@ Upcoming features:
  * Music Player Daemon: http://www.musicpd.org
 
 ## License:
-If not stated otherwise student_evaluator is distributed in terms of the GPL software license.
+If not stated otherwise "YouTube to MPD" is distributed in terms of the GPL software license.
 See COPYING file in the distribution for details.
 
 ## Bug reports:
  * Jeroen Doggen <jeroendoggen@gmail.com>
  * Post issues to GitHub https://github.com/jeroendoggen/youtube-to-mpd/issues.
-
-## Changelog:
-0.0.1: Basic features
- * Coming soon
