@@ -54,7 +54,10 @@ class YoutubeToMPD:
     def download(self):
         if(self.settings.playlist) is not None:
             print("Starting playlist download")
-            os.system("youtube-dl -cit --extract-audio --audio-format aac  http://www.youtube.com/playlist?list=" + self.settings.playlist)
+            if (self.settings.create_subfolders is True):
+                os.system("youtube-dl -q -ci --extract-audio -o '%(playlist)s/%(title)s-%(id)s.%(ext)s' --audio-format aac  http://www.youtube.com/playlist?list=" + self.settings.playlist)
+            if (self.settings.create_subfolders is False):
+                os.system("youtube-dl -cit --extract-audio --audio-format aac  http://www.youtube.com/playlist?list=" + self.settings.playlist)
         if(self.settings.song) is not None:
             print("Starting song download")
             os.system("youtube-dl -cit --extract-audio --audio-format aac  https://www.youtube.com/watch?v=" + self.settings.song)
@@ -63,8 +66,8 @@ class YoutubeToMPD:
         print("Starting Youtube To MPD")
         print(" - Music folder: " + self.settings.music_folder)
         print(" - YouTube folder: " + self.settings.youtube_foldername)
-        print(" - Create per-playlist folder: " + self.settings.create_subfolders)
-        print(" - Create MPD playlist: " + self.settings.create_playlists)
+        print(" - Create per-playlist folder: " + str(self.settings.create_subfolders))
+        print(" - Create MPD playlist: " + str(self.settings.create_playlists))
 
     def print_end_info(self):
         print("Processing finished")

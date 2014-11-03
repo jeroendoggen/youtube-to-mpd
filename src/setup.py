@@ -22,6 +22,6 @@ setup(name='youtube_to_mpd',
       url='https://github.com/jeroendoggen/youtube_to_mpd',
       packages=['youtube_to_mpd'],
       package_data={'youtube_to_mpd': ['*.py', '*.conf']},
-      license='MIT',
+      license='GPLv3',
       platforms=['Linux'],
       )

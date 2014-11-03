@@ -53,8 +53,8 @@ class Settings:
             self.Config.read(filename)
             self.music_folder = str(self.config_section_map("Config")['music_folder'])
             self.youtube_foldername = str(self.config_section_map("Config")['youtube_foldername'])
-            self.create_subfolders = self.config_section_map("Config")['create_subfolders']
-            self.create_playlists = self.config_section_map("Config")['create_playlists']
+            self.create_subfolders = self.Config.getboolean('Config', 'create_subfolders')
+            self.create_playlists = self.Config.getboolean('Config', 'create_playlists')
 
         except AttributeError:
             #TODO: this does not work!! (AttributeError or KeyError needed? both?)
