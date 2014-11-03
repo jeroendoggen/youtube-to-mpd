@@ -7,6 +7,7 @@
 from __future__ import print_function, division  # We require Python 2.6+
 
 import os
+import subprocess
 
 from settings import Settings
 
@@ -54,26 +55,34 @@ class YoutubeToMPD:
     def download(self):
         if(self.settings.playlist) is not None:
             print("Starting playlist download")
+            self.print_playlist_info()
             if (self.settings.create_subfolders is True):
-                os.system("youtube-dl -q -ci --extract-audio -o '%(playlist)s/%(title)s-%(id)s.%(ext)s' --audio-format aac  http://www.youtube.com/playlist?list=" + self.settings.playlist)
+                os.system("youtube-dl -q -ci --extract-audio -o '%(playlist)s/%(title)s.%(ext)s' --audio-format aac http://www.youtube.com/playlist?list=" + self.settings.playlist)
             if (self.settings.create_subfolders is False):
-                os.system("youtube-dl -cit --extract-audio --audio-format aac  http://www.youtube.com/playlist?list=" + self.settings.playlist)
+                os.system("youtube-dl -q -ci --extract-audio -o '%(title)s.%(ext)s' --audio-format aac http://www.youtube.com/playlist?list=" + self.settings.playlist)
         if(self.settings.song) is not None:
             print("Starting song download")
-            os.system("youtube-dl -cit --extract-audio --audio-format aac  https://www.youtube.com/watch?v=" + self.settings.song)
+            self.print_song_info()
+            os.system("youtube-dl -q -ci --extract-audio -o '%(title)s.%(ext)s' --audio-format aac https://www.youtube.com/watch?v=" + self.settings.song)
+
+    def print_song_info(self):
+        subprocess.Popen("youtube-dl -e https://www.youtube.com/watch?v=" + self.settings.song, shell=True)
+
+    def print_playlist_info(self):
+        subprocess.Popen("youtube-dl -e http://www.youtube.com/playlist?list=" + self.settings.playlist, shell=True)
 
     def print_start_info(self):
         print("Starting Youtube To MPD")
         print(" - Music folder: " + self.settings.music_folder)
         print(" - YouTube folder: " + self.settings.youtube_foldername)
         print(" - Create per-playlist folder: " + str(self.settings.create_subfolders))
-        print(" - Create MPD playlist: " + str(self.settings.create_playlists))
+        #print(" - Create MPD playlist: " + str(self.settings.create_playlists))
 
     def print_end_info(self):
         print("Processing finished")
-        print(" - Files downloaded: " + str(self.download_counter))
-        print(" - Files converted: " + str(self.download_counter - self.errors))
-        print(" - Time elapsed: " + str(self.time_passed))
+        #print(" - Files downloaded: " + str(self.download_counter))
+        #print(" - Files converted: " + str(self.download_counter - self.errors))
+        #print(" - Time elapsed: " + str(self.time_passed))
 
     def exit_value(self):
         #"""TODO: Generate the exit value for the application."""
