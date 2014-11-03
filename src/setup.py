@@ -10,7 +10,7 @@ from distutils.core import setup
 from youtube_to_mpd import __version__
 
 
-with open('README.txt') as readme_file:
+with open('README.rst') as readme_file:
     LONG_DESCRIPTION = readme_file.read()
 
 setup(name='youtube_to_mpd',
