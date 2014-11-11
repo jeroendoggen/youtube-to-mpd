@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="YouTube to MPD : Front end for youtube-dl to auto add YouTube music to MPD ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>YouTube to MPD</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jeroendoggen/youtube-to-mpd">View on GitHub</a>
+
+          <h1 id="project_title">YouTube to MPD</h1>
+          <h2 id="project_tagline">Front end for youtube-dl to auto add YouTube music to MPD </h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jeroendoggen/youtube-to-mpd/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jeroendoggen/youtube-to-mpd/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>Features:</p>
+
+<ul>
+<li>Download music from YouTube videos</li>
+<li>Download music from YouTube playlists</li>
+<li>Add them to mpd to allow easy playback</li>
+</ul>
+
+<p>Upcoming features:</p>
+
+<ul>
+<li>Create folders/mpd playlists for every YouTube playlist</li>
+</ul>
+
+<h2>
+<a id="install-from-the-python-package-index" class="anchor" href="#install-from-the-python-package-index" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install from the Python Package Index:</h2>
+
+<ul>
+<li>
+<code>pip install youtube_to_mpd</code>. (Linux &amp; Windows)</li>
+<li>Package can be found here: <a href="http://pypi.python.org/pypi/youtube_to_mpd/">http://pypi.python.org/pypi/youtube_to_mpd/</a>
+</li>
+</ul>
+
+<h2>
+<a id="install-from-source" class="anchor" href="#install-from-source" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install from source:</h2>
+
+<ul>
+<li>run <code>setup.py install</code> (with root privileges)</li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage:</h2>
+
+<ul>
+<li>Download a single song and add to MPD: <code>python -m youtube_to_mpd -s SONGID</code> (for example: DgQR0x5ljek)</li>
+<li>Download a playlist and add to MPD: <code>python -m youtube_to_mpd -p PLAYLISTID</code> (for example: FLoLRVbYOEns6PTJtWo0Y_7g)</li>
+</ul>
+
+<h2>
+<a id="easy-usage" class="anchor" href="#easy-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Easy usage:</h2>
+
+<p>Configure:</p>
+
+<ul>
+<li>Add the following to your ".bashrc": alias playlist:'python -m youtube_to_mpd -p'</li>
+<li>Add the following to your ".bashrc": alias song:'python -m youtube_to_mpd -s'</li>
+<li>Start a new console session</li>
+</ul>
+
+<p>Then run:</p>
+
+<ul>
+<li>
+<code>song SONGID</code> (for example: <code>song mIBTg7q9oNc</code>)</li>
+<li>
+<code>playlist LISTID</code> (for example: <code>playlist RDmIBTg7q9oNc</code>)</li>
+</ul>
+
+<h2>
+<a id="limitations" class="anchor" href="#limitations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Limitations:</h2>
+
+<ul>
+<li>Make sure you put the "settings.conf" file in your current path (issue #5)</li>
+<li>Developed and tested on Debian Wheezy</li>
+</ul>
+
+<h2>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies:</h2>
+
+<ul>
+<li>youtube-dl: <a href="https://github.com/rg3/youtube-dl">https://github.com/rg3/youtube-dl</a>
+</li>
+<li>Music Player Daemon: <a href="http://www.musicpd.org">http://www.musicpd.org</a>
+</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License:</h2>
+
+<p>If not stated otherwise "YouTube to MPD" is distributed in terms of the GPL software license.
+See COPYING file in the distribution for details.</p>
+
+<h2>
+<a id="bug-reports" class="anchor" href="#bug-reports" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bug reports:</h2>
+
+<ul>
+<li>Jeroen Doggen <a href="mailto:jeroendoggen@gmail.com">jeroendoggen@gmail.com</a>
+</li>
+<li>Post issues to GitHub <a href="https://github.com/jeroendoggen/youtube-to-mpd/issues">https://github.com/jeroendoggen/youtube-to-mpd/issues</a>.</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">YouTube to MPD maintained by <a href="https://github.com/jeroendoggen">jeroendoggen</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
