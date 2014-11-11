@@ -28,12 +28,12 @@ Configure:
  * Start a new console session
 
 Then run:
- * ``song SONGID`` (for example: *song mIBTg7q9oNc*"
- * ``playlist LISTID`` (for example: *playlist RDmIBTg7q9oNc*"
+ * ``song SONGID`` (for example: ``song mIBTg7q9oNc``"
+ * ``playlist LISTID`` (for example: ``playlist RDmIBTg7q9oNc``"
  
 ## Limitations:
- * Currently under active development (early Alpha!)
- * Not feature complete at all!
+ * Make sure you put the "settings.conf" file in your current path (issue #5)
+ * Developed and tested on Debian Wheezy
 
 ## Dependencies:
  * youtube-dl: https://github.com/rg3/youtube-dl
