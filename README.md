@@ -21,6 +21,16 @@ Upcoming features:
  * Download a single song and add to MPD: ``python -m youtube_to_mpd -s SONGID`` (for example: DgQR0x5ljek)
  * Download a playlist and add to MPD: ``python -m youtube_to_mpd -p PLAYLISTID`` (for example: FLoLRVbYOEns6PTJtWo0Y_7g)
 
+## Easy usage:
+Configure:
+ * Add the following to your ".bashrc": alias playlist:'python -m youtube_to_mpd -p'
+ * Add the following to your ".bashrc": alias song:'python -m youtube_to_mpd -s'
+ * Start a new console session
+
+Then run:
+ * ``song SONGID`` (for example: *song mIBTg7q9oNc*"
+ * ``playlist LISTID`` (for example: *playlist RDmIBTg7q9oNc*"
+ 
 ## Limitations:
  * Currently under active development (early Alpha!)
  * Not feature complete at all!

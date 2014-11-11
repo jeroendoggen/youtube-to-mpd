@@ -11,11 +11,20 @@ Usage:
 ------
  - Download a single song and add to MPD::
 
-    python -m youtube_to_mpd -s SONGID
+    *python -m youtube_to_mpd -s SONGID*
 
  - Download a playlist and add to MPD::
 
-    python -m youtube_to_mpd -p PLAYLISTID
+    p*ython -m youtube_to_mpd -p LISTID*
+
+Easy usage:
+-----------
+Configure:
+ - Add the following to your ".bashrc": alias playlist:'python -m youtube_to_mpd -p'
+ - Add the following to your ".bashrc": alias song:'python -m youtube_to_mpd -s'
+The run
+ - *song SONGID* (for example: *song mIBTg7q9oNc*"
+ - *playlist LISTID* (for example: *playlist RDmIBTg7q9oNc*"
 
 Dependencies:
 -------------
