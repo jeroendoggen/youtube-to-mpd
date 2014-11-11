@@ -28,8 +28,8 @@ Configure:
  * Start a new console session
 
 Then run:
- * ``song SONGID`` (for example: ``song mIBTg7q9oNc``"
- * ``playlist LISTID`` (for example: ``playlist RDmIBTg7q9oNc``"
+ * ``song SONGID`` (for example: ``song mIBTg7q9oNc``)
+ * ``playlist LISTID`` (for example: ``playlist RDmIBTg7q9oNc``)
  
 ## Limitations:
  * Make sure you put the "settings.conf" file in your current path (issue #5)
