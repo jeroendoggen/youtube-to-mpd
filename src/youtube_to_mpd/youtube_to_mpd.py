@@ -57,13 +57,13 @@ class YoutubeToMPD:
             print("Starting playlist download")
             self.print_playlist_info()
             if (self.settings.create_subfolders is True):
-                os.system("youtube-dl -q -ci --extract-audio -o '%(playlist)s/%(title)s.%(ext)s' --audio-format aac http://www.youtube.com/playlist?list=" + self.settings.playlist)
+                os.system("youtube-dl -q -ci --extract-audio -o '%(playlist)s/%(title)s.%(ext)s' --audio-format mp3  --audio-quality 0 http://www.youtube.com/playlist?list=" + self.settings.playlist)
             if (self.settings.create_subfolders is False):
-                os.system("youtube-dl -q -ci --extract-audio -o '%(title)s.%(ext)s' --audio-format aac http://www.youtube.com/playlist?list=" + self.settings.playlist)
+                os.system("youtube-dl -q -ci --extract-audio -o '%(title)s.%(ext)s' --audio-format mp3  --audio-quality 0 http://www.youtube.com/playlist?list=" + self.settings.playlist)
         if(self.settings.song) is not None:
             print("Starting song download")
             self.print_song_info()
-            os.system("youtube-dl -q -ci --extract-audio -o '%(title)s.%(ext)s' --audio-format aac https://www.youtube.com/watch?v=" + self.settings.song)
+            os.system("youtube-dl -q -ci --extract-audio -o '%(title)s.%(ext)s' --audio-format mp3  --audio-quality 0 https://www.youtube.com/watch?v=" + self.settings.song)
 
     def print_song_info(self):
         subprocess.Popen("youtube-dl -e https://www.youtube.com/watch?v=" + self.settings.song, shell=True)
